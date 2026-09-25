@@ -7,7 +7,7 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "start": "node server.mjs",
+    "start": "node server.mjs --seed-demo && node server.mjs",
     "test": "node --test test/api.test.mjs",
     "seed": "node server.mjs --seed-demo",
     "test:dom": "node test/dom.test.mjs",
