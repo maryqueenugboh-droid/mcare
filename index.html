@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MotherCare NG — Maternal & Child Health</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="toast"></div>
+<header class="topbar">
+ <div class="brand"><div class="logo">MC</div><div><b>MotherCare NG</b><small>Maternal & Child Health</small></div></div>
+ <div class="top-right"><span class="demo">DEMO HEALTH APP</span><button id="themeBtn">◐</button></div>
+</header>
+
+<section id="login" class="login-wrap">
+ <div class="intro"><span class="eyebrow">PREGNANCY • BABY • CARE</span><h1>One simple place for your <em>maternal journey.</em></h1>
+ <p>A mobile-first academic prototype for antenatal appointments, pregnancy milestones, child immunisation tracking, health education and care reminders.</p>
+ <div class="features"><span>✓ ANC tracking</span><span>✓ Appointment reminders</span><span>✓ Child records</span><span>✓ Health education</span></div></div>
+ <div class="login-card"><div class="lock">♡</div><h2>Welcome back</h2><p>Use the demonstration account.</p>
+ <label>Patient ID<input id="patientId" value="MCH-001"></label><label>PIN<input id="pin" type="password" value="1234"></label>
+ <button class="primary full" id="loginBtn">Open health dashboard →</button><small class="demo-login">Demo: MCH-001 / 1234</small>
+ </div>
+</section>
+
+<section id="app" class="hidden">
+<div class="layout">
+<aside class="sidebar">
+ <div class="side-label">MY CARE</div>
+ <button class="nav active" data-page="home">⌂ <span>Overview</span></button>
+ <button class="nav" data-page="antenatal">♡ <span>Antenatal care</span></button>
+ <button class="nav" data-page="appointments">◷ <span>Appointments</span></button>
+ <button class="nav" data-page="child">♧ <span>Child health</span></button>
+ <button class="nav" data-page="education">▤ <span>Health education</span></button>
+ <div class="divider"></div>
+ <button class="nav" data-page="alerts">✦ <span>Care assistant</span></button>
+ <button class="nav" data-page="records">▣ <span>Health records</span></button>
+ <div class="side-bottom"><div class="profile"><div class="avatar">A</div><div><b>Amara Demo</b><small>Expectant mother</small></div></div><button id="logout">Sign out</button></div>
+</aside>
+<main class="content">
+<div class="mobile-head"><b>MotherCare NG</b><button id="mobileLogout">Sign out</button></div>
+
+<section class="page" id="homePage">
+ <div class="head"><div><span class="eyebrow">GOOD MORNING</span><h2>Your care overview</h2><p>Keep up with your appointments, pregnancy milestones and your baby's health.</p></div><span class="status">● Active care plan</span></div>
+ <div class="stats">
+  <div><span>Pregnancy</span><strong>28 weeks</strong><small>Third trimester</small></div>
+  <div><span>Next ANC visit</span><strong>24 Sep</strong><small>10:00 AM · Demo clinic</small></div>
+  <div><span>Child vaccines</span><strong>5 / 8</strong><small>Records completed</small></div>
+  <div><span>Care assistant</span><strong class="green">Low concern</strong><small>Based on demo data</small></div>
+ </div>
+ <div class="grid2">
+  <div class="panel pregnancy">
+   <div class="panel-head"><div><span class="tag">PREGNANCY PROGRESS</span><h3>Week 28 of 40</h3></div><b>70%</b></div>
+   <div class="progress"><i style="width:70%"></i></div>
+   <div class="milestones"><span class="done">✓ Booking</span><span class="done">✓ Mid-pregnancy</span><span class="current">● Third trimester</span><span>○ Birth preparation</span></div>
+   <button class="secondary" data-go="antenatal">View antenatal timeline</button>
+  </div>
+  <div class="panel next">
+   <div class="panel-head"><h3>Next appointment</h3><span class="calendar">24</span></div>
+   <h2>Routine ANC Visit</h2><p>Thursday, 24 September 2026 · 10:00 AM</p><div class="clinic">🏥 Demo Primary Health Centre<br><small>Bring your ANC card and previous records.</small></div>
+   <button class="primary" data-go="appointments">Manage appointment</button>
+  </div>
+ </div>
+ <div class="panel notice"><div>!</div><section><b>Important health notice</b><p>This app is an educational prototype. It does not replace a qualified health professional. For urgent symptoms or emergencies, seek appropriate medical care immediately.</p></section></div>
+</section>
+
+<section class="page hidden" id="antenatalPage">
+ <div class="head"><div><span class="eyebrow">MATERNAL CARE</span><h2>Antenatal care tracker</h2><p>Track routine visits and pregnancy milestones in the demonstration record.</p></div><span class="status">28 weeks</span></div>
+ <div class="timeline">
+  <article class="visit done"><div class="dot">✓</div><div><small>12 weeks · Completed</small><h3>Booking / first ANC visit</h3><p>Initial assessment, history and routine antenatal registration.</p></div><b>Completed</b></article>
+  <article class="visit done"><div class="dot">✓</div><div><small>20 weeks · Completed</small><h3>Mid-pregnancy review</h3><p>Routine antenatal follow-up and health education.</p></div><b>Completed</b></article>
+  <article class="visit current"><div class="dot">●</div><div><small>28 weeks · Current</small><h3>Third-trimester review</h3><p>Scheduled routine review. Actual clinical measurements should be entered by a health professional.</p></div><b>Upcoming</b></article>
+  <article class="visit"><div class="dot">○</div><div><small>32–36 weeks · Future</small><h3>Late pregnancy follow-up</h3><p>Future routine care milestone.</p></div><b>Planned</b></article>
+ </div>
+ <div class="panel"><div class="panel-head"><h3>Personal care notes</h3><span class="tag">DEMO</span></div><textarea id="careNotes" placeholder="Add a personal reminder or question for your next appointment..."></textarea><button class="primary" id="saveNotes">Save note</button></div>
+</section>
+
+<section class="page hidden" id="appointmentsPage">
+ <div class="head"><div><span class="eyebrow">SCHEDULE</span><h2>Appointments</h2><p>Upcoming and previous demonstration appointments.</p></div><button class="primary" id="addAppt">+ Add reminder</button></div>
+ <div id="appointments"></div>
+</section>
+
+<section class="page hidden" id="childPage">
+ <div class="head"><div><span class="eyebrow">CHILD HEALTH</span><h2>Baby health record</h2><p>Track immunisation milestones and routine child-health information.</p></div><span class="status">Baby: 8 months</span></div>
+ <div class="child-summary"><div class="baby-avatar">B</div><div><span class="tag">CHILD PROFILE</span><h2>Baby Amara</h2><p>Age: 8 months · Demo record</p></div></div>
+ <div class="panel"><div class="panel-head"><h3>Immunisation tracker</h3><span>5 of 8 recorded</span></div><div id="vaccines"></div></div>
+ <div class="panel notice"><div>i</div><section><b>Keep records up to date</b><p>Vaccination schedules can vary according to national guidance and individual circumstances. Confirm due dates with a qualified healthcare provider.</p></section></div>
+</section>
+
+<section class="page hidden" id="educationPage">
+ <div class="head"><div><span class="eyebrow">LEARN & PREPARE</span><h2>Health education</h2><p>Short educational cards for pregnancy and early child care.</p></div></div>
+ <div class="edu-grid" id="education"></div>
+</section>
+
+<section class="page hidden" id="alertsPage">
+ <div class="head"><div><span class="eyebrow">CARE ASSISTANT</span><h2>Wellness & reminder assistant</h2><p>A rules-based prototype that highlights items to discuss with a healthcare professional.</p></div><span class="status ai">✦ ASSISTIVE</span></div>
+ <div class="assistant"><div class="score">82</div><div><h2>Routine follow-up profile</h2><p>Demo data indicates scheduled follow-up is due. This is not a medical diagnosis or clinical risk prediction.</p></div></div>
+ <div class="panel"><h3>Current reminders</h3><div class="alert-item"><b>Upcoming ANC visit</b><span>24 Sep 2026 · 10:00 AM</span></div><div class="alert-item"><b>Child immunisation record</b><span>Review next due vaccine with your provider.</span></div><div class="alert-item"><b>Prepare questions</b><span>Add questions to your care notes before the next visit.</span></div></div>
+ <div class="panel safe"><b>How the assistant works</b><p>It checks demo appointment dates, record completeness and reminder settings. It does not diagnose illness, prescribe treatment or make clinical decisions.</p></div>
+</section>
+
+<section class="page hidden" id="recordsPage">
+ <div class="head"><div><span class="eyebrow">MY RECORDS</span><h2>Health records</h2><p>Demonstration summary of information stored locally in this prototype.</p></div><button class="secondary" id="export">Export demo record</button></div>
+ <div class="record-grid"><div class="panel"><span class="tag">MATERNAL</span><h3>Pregnancy profile</h3><dl><dt>Pregnancy week</dt><dd>28 weeks</dd><dt>Care stage</dt><dd>Third trimester</dd><dt>Next visit</dt><dd>24 Sep 2026</dd><dt>Record status</dt><dd class="green">Active</dd></dl></div>
+ <div class="panel"><span class="tag">CHILD</span><h3>Child profile</h3><dl><dt>Child age</dt><dd>8 months</dd><dt>Vaccines recorded</dt><dd>5 / 8</dd><dt>Record status</dt><dd class="green">Active</dd></dl></div></div>
+ <div class="panel"><div class="panel-head"><h3>Privacy & consent</h3><span class="status">Local demo</span></div><p>Your data in this prototype is stored in the browser using LocalStorage. A production health application would require strong authentication, encryption, access controls, secure backend storage, consent management and compliance with applicable Nigerian health/data-protection requirements.</p><label class="check"><input type="checkbox" id="consent"> I understand this is a demonstration record.</label></div>
+</section>
+
+</main></div></section>
+<script src="js/app.js"></script>
+</body></html>

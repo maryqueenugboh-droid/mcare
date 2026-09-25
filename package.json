@@ -1,0 +1,20 @@
+{
+  "name": "mothercare-ng",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/api.test.mjs",
+    "seed": "node server.mjs --seed-demo",
+    "test:dom": "node test/dom.test.mjs",
+    "test:browser": "node test/browser.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "playwright": "1.62.1"
+  }
+}

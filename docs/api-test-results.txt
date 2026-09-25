@@ -1,0 +1,30 @@
+▶ MotherCare integrated server workflows
+  ✔ Reject unauthenticated health-record access (20.82375ms)
+  ✔ Register, reject duplicate email and invalid password (58.848641ms)
+  ✔ Authenticate separate mother, provider and administrator sessions (215.834026ms)
+  ✔ Block public role escalation and admin clinical access (44.544406ms)
+  ✔ Save pregnancy and reject duplicate profile (6.904865ms)
+  ✔ Schedule, validate time and reject appointment collision (8.259986ms)
+  ✔ Generate appointment reminder and persist read state (21.05236ms)
+  ✔ Provider reviews assigned records but cannot read unassigned patient (4.499841ms)
+  ✔ Update appointment and reject stale update (7.434753ms)
+  ✔ Validate maternal measures and save provider observation (6.693164ms)
+  ✔ Create child and enforce child-owner relationship (11.168648ms)
+  ✔ Save milestone and vaccination record (6.966436ms)
+  ✔ Medication reminder uses stored due date (5.169184ms)
+  ✔ Two-way communication and unauthorized recipient rejection (8.638251ms)
+  ✔ Administrator manages education and rejects unsafe source links (8.747928ms)
+  ✔ Staff creation and account deactivation revoke sessions (43.681207ms)
+  ✔ Export excludes password hashes and other mothers (1.502077ms)
+  ✔ Revoking provider assignment removes clinical access (4.690005ms)
+  ✔ Data and authenticated session survive server restart (95.244314ms)
+  ✔ Delete saved growth record and sign out (7.558625ms)
+✔ MotherCare integrated server workflows (684.44127ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 959.144204

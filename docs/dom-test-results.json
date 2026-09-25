@@ -1,0 +1,55 @@
+{
+  "executedAt": "2026-09-24T13:05:15.786Z",
+  "environment": "jsdom 26.1.0; Chart stubbed, no visual rendering or browser layout verification",
+  "tests": [
+    {
+      "name": "Authentication form submits and opens saved mother session",
+      "status": "Passed"
+    },
+    {
+      "name": "Pregnancy form saves and renders database values",
+      "status": "Passed"
+    },
+    {
+      "name": "Appointment form saves and edits a record",
+      "status": "Passed"
+    },
+    {
+      "name": "Maternal measurement submission and chart data path",
+      "status": "Passed"
+    },
+    {
+      "name": "Child profile and child-linked growth form",
+      "status": "Passed"
+    },
+    {
+      "name": "Milestone and vaccine forms use selected child",
+      "status": "Passed"
+    },
+    {
+      "name": "Medication form and computed reminder screen",
+      "status": "Passed"
+    },
+    {
+      "name": "Provider session stays separate from mother session",
+      "status": "Passed"
+    },
+    {
+      "name": "Two-way messages render in both account views",
+      "status": "Passed"
+    },
+    {
+      "name": "Administrator view and content creation form",
+      "status": "Passed"
+    },
+    {
+      "name": "Profile and provider selection update",
+      "status": "Passed"
+    },
+    {
+      "name": "Saved records are escaped as text",
+      "status": "Passed"
+    }
+  ],
+  "failures": []
+}
